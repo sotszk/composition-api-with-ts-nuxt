@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "dev": "nuxt-ts",
+    "build": "nuxt-ts build",
+    "generate": "nuxt-ts generate",
+    "start": "nuxt-ts start",
+    "lint": "eslint --ext .ts,.js,.vue ./src"
+  },
+  "devDependencies": {
+    "@nuxt/typescript-build": "^0.1.11",
+    "@nuxtjs/eslint-config-typescript": "^0.1.2",
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "eslint": "^6.3.0",
+    "vue-eslint-parser": "^6.0.4"
+  },
+  "dependencies": {
+    "@nuxt/typescript-runtime": "^0.1.3",
+    "@vue/composition-api": "^0.2.1",
+    "nuxt": "^2.9.2"
+  }
+}
