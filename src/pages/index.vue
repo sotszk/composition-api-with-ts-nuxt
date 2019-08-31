@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>{{ title }}</h1>
-    <input v-model="title" type="text">
+    <input v-model="title" type="text" placeholder="hogehoge" />
   </div>
 </template>
 
@@ -9,19 +9,18 @@
 import { createComponent, reactive } from '@vue/composition-api'
 
 export default createComponent({
-  asyncData () {
+  asyncData() {
     return {}
   },
 
-  setup () {
+  setup() {
     const title: string = reactive('Hello Type safety world!')
 
     return {
-      title
+      title,
     }
-  }
+  },
 })
 </script>
 
-<style lang="css" scoped>
-</style>
+<style lang="css" scoped></style>

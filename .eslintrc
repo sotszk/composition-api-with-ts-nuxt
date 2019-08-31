@@ -1,9 +1,0 @@
-{
-  "parserOptions": {
-    "parser": "@typescript-eslint/parser"
-  },
-  "plugins": ["@typescript-eslint"],
-  "extends": [
-    "@nuxtjs/eslint-config-typescript"
-  ],
-}

@@ -11,10 +11,9 @@ import Navigation from '~/components/Navigation'
 
 export default Vue.extend({
   components: {
-    Navigation
-  }
+    Navigation,
+  },
 })
 </script>
 
-<style lang="css" scoped>
-</style>
+<style lang="css" scoped></style>
