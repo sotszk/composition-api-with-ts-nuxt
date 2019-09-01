@@ -9,6 +9,8 @@
 import { ref, onMounted } from '@vue/composition-api'
 
 export default {
+  middleware: ['home'],
+
   asyncData() {
     return {}
   },
