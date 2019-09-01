@@ -42,7 +42,6 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import ky from 'ky-universal'
 
 interface Slide {
   title: string
@@ -57,12 +56,12 @@ interface Slideshow {
 }
 
 export default Vue.extend({
-  async asyncData({ error }) {
-    const api = ky.create({ prefixUrl: 'https://httpbin.org' })
-
+  async asyncData({ error, app }) {
     let slideshow: Slideshow
     try {
-      const response: any = await api.get('json').json()
+      const response = await app.$_apiClient
+        .get('https://httpbin.org/json')
+        .json()
       slideshow = response.slideshow
     } catch (err) {
       console.log(err)
