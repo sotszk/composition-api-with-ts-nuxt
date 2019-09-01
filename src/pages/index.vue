@@ -6,21 +6,27 @@
 </template>
 
 <script lang="ts">
-import { createComponent, reactive } from '@vue/composition-api'
+import { ref, onMounted } from '@vue/composition-api'
 
-export default createComponent({
+export default {
   asyncData() {
     return {}
   },
 
   setup() {
-    const title: string = reactive('Hello Type safety world!')
+    const title = ref('Hello Type safety world!')
+
+    onMounted(() => {
+      setTimeout(() => {
+        title.value = 'Good night. Type safety world.'
+      }, 1000)
+    })
 
     return {
       title,
     }
   },
-})
+}
 </script>
 
 <style lang="css" scoped></style>

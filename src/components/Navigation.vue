@@ -1,17 +1,29 @@
 <template>
-  <nav>
-    <nuxt-link to="/">
-      TOP
-    </nuxt-link>
-    |
-    <nuxt-link to="/about">
-      ABOUT
-    </nuxt-link>
+  <nav class="nav">
+    <span v-for="item in navItems" :key="item.name" class="nav-item">
+      <nuxt-link :to="item.path">{{ item.name }}</nuxt-link>
+    </span>
   </nav>
 </template>
 
-<script>
-export default {}
+<script lang="ts">
+export default {
+  setup() {
+    const navItems = [
+      { name: 'TOP', path: '/' },
+      { name: 'ABOUT', path: '/about' },
+    ]
+
+    return {
+      navItems,
+    }
+  },
+}
 </script>
 
-<style lang="css" scoped></style>
+<style lang="css" scoped>
+.nav-item {
+  display: inline-block;
+  margin-right: 8px;
+}
+</style>

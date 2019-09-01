@@ -5,15 +5,14 @@
   </div>
 </template>
 
-<script>
-import Vue from 'vue'
-import Navigation from '~/components/Navigation'
+<script lang="ts">
+import Navigation from '~/components/Navigation.vue'
 
-export default Vue.extend({
+export default {
   components: {
     Navigation,
   },
-})
+}
 </script>
 
 <style lang="css" scoped></style>

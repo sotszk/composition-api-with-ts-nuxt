@@ -1,4 +1,5 @@
 module.exports = {
+  root: true,
   env: {
     browser: true,
     node: true,
@@ -9,10 +10,12 @@ module.exports = {
   plugins: ['@typescript-eslint'],
   extends: [
     '@nuxtjs/eslint-config-typescript',
-    'plugin:prettier/recommended',
+    'plugin:vue/recommended',
+    '@vue/prettier'
   ],
   rules: {
     'comma-dangle': ['error', 'always-multiline'],
+    'no-console': 1,
     'vue/html-closing-bracket-spacing': 0,
     'vue/html-self-closing': 0,
     'prettier/prettier': [
