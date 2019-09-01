@@ -12,6 +12,7 @@ export default {
     const navItems = [
       { name: 'TOP', path: '/' },
       { name: 'ABOUT', path: '/about' },
+      { name: 'PLAYGROUND', path: '/playground' },
     ]
 
     return {
