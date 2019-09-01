@@ -6,6 +6,7 @@ const config: Configuration = {
   plugins: [
     '~/plugins/composition-api.ts',
     '~/plugins/api-client.ts',
+    '~/plugins/logger.ts',
   ],
 }
 

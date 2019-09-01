@@ -73,11 +73,8 @@ export default Vue.extend({
     }
   },
 
-  // TODO: plugin の型定義がうまく動かない
   setup(_, { root }) {
-    console.log(root.$route)
-    console.log(Object.keys(root))
-    console.log(root.$_apiClient)
+    root.$_logger('Hello logger')
     return {}
   },
 })
