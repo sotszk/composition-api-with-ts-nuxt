@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts">
-import useChangeStatus, { Status } from '~/hooks/useChangeStatus'
+import useChangeStatus from '~/hooks/useChangeStatus'
 import StatusChecker from '~/components/StatusChecker.vue'
 
 export default {
@@ -16,10 +16,10 @@ export default {
   },
 
   setup() {
-    const { status } = useChangeStatus()
+    const { status, toggleStatus } = useChangeStatus()
 
     const onClickChangeStatusBtn = () => {
-      status.value = status.value === Status.TODO ? Status.DONE : Status.TODO
+      toggleStatus()
     }
 
     return {
