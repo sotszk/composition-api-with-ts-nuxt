@@ -13,6 +13,7 @@ export default {
       { name: 'TOP', path: '/' },
       { name: 'ABOUT', path: '/about' },
       { name: 'PLAYGROUND', path: '/playground' },
+      { name: 'ASYNC', path: '/async' },
     ]
 
     return {

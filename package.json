@@ -20,6 +20,8 @@
   "dependencies": {
     "@nuxt/typescript-runtime": "^0.1.3",
     "@vue/composition-api": "^0.2.1",
+    "ky": "^0.12.0",
+    "ky-universal": "^0.3.0",
     "nuxt": "^2.9.2"
   }
 }

@@ -1,0 +1,77 @@
+<template>
+  <div>
+    <h1>Async Playground</h1>
+
+    <div>
+      <h2>Slideshow</h2>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ slideshow.title }}</td>
+            <td>{{ slideshow.author }}</td>
+            <td>{{ slideshow.date }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Items</h3>
+      <table v-for="slide in slideshow.slides" :key="slide.title" border="1">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ slide.title }}</td>
+            <td>{{ slide.type }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</template>
+
+<script lang="ts">
+import Vue from 'vue'
+import ky from 'ky-universal'
+
+interface Slide {
+  title: string
+  type: string
+}
+
+interface Slideshow {
+  title: string
+  author: string
+  date: string | Date
+  slides: Array<Slide>
+}
+
+export default Vue.extend({
+  async asyncData({ error }) {
+    const api = ky.create({ prefixUrl: 'https://httpbin.org' })
+
+    let slideshow: Slideshow
+    try {
+      const response: any = await api.get('json').json()
+      slideshow = response.slideshow
+    } catch (err) {
+      console.log(err)
+      return error(err)
+    }
+
+    return {
+      slideshow,
+    }
+  },
+})
+</script>
