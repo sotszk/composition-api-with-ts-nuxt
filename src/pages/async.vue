@@ -72,5 +72,13 @@ export default Vue.extend({
       slideshow,
     }
   },
+
+  // TODO: plugin の型定義がうまく動かない
+  setup(_, { root }) {
+    console.log(root.$route)
+    console.log(Object.keys(root))
+    console.log(root.$_apiClient)
+    return {}
+  },
 })
 </script>

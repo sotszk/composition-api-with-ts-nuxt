@@ -22,6 +22,7 @@ export default Vue.extend({
 
   setup(props) {
     // const { status } = props // NOTE: 分割代入すると computed が動かない？
+    // @see https://vue-composition-api-rfc.netlify.com/#ref-vs-reactive
     const statusMsg = computed(() => `今の状態は ${props.status} どぇす。`)
     return {
       statusMsg,

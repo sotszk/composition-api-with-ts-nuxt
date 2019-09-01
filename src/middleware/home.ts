@@ -1,7 +1,7 @@
 import { Middleware } from '@nuxt/types'
 
-const homeMiddleware: Middleware = (ctx) => {
+const homeMiddleware: Middleware = () => {
   console.log('Log from home middleware')
 }
 
-export default homeMiddleware;
+export default homeMiddleware

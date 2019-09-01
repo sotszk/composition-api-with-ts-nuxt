@@ -7,8 +7,9 @@ export enum Status {
 
 const useChangeStatus = () => {
   const status = ref(Status.TODO)
-  watch(status, (statusBefore, statusAfter) => {
-    console.log('status changed');
+  watch(status, (statusAfter, statusBefore) => {
+    console.log(statusBefore, 'to', statusAfter)
+    console.log('status changed')
   })
 
   const toggleStatus = (): void => {
@@ -16,8 +17,8 @@ const useChangeStatus = () => {
   }
 
   return {
-    status,
     toggleStatus,
+    status,
   }
 }
 
