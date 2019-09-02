@@ -14,6 +14,7 @@ export default {
       { name: 'ABOUT', path: '/about' },
       { name: 'PLAYGROUND', path: '/playground' },
       { name: 'ASYNC', path: '/async' },
+      { name: 'TIMER', path: '/timer' },
     ]
 
     return {
