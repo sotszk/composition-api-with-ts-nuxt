@@ -10,6 +10,7 @@ export interface ApiClient {
   post(url: Url, options: Options): any
   put(url: Url, options: Options): any
   delete(url: Url, options: Options): any
+  head(url: Url, options: Options): any
 }
 
 const apiClient: ApiClient = {
@@ -24,6 +25,9 @@ const apiClient: ApiClient = {
   },
   delete(url, options) {
     return ky.delete(url, options)
+  },
+  head(url, options) {
+    return ky.head(url, options)
   },
 }
 

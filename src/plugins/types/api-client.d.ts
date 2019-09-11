@@ -8,6 +8,9 @@ declare module 'vue/types/vue' {
 }
 
 declare module '@nuxt/types' {
+  interface Context {
+    $_apiClient: ApiClient // eslint-disable-line
+  }
   interface NuxtAppOptions {
     $_apiClient: ApiClient // eslint-disable-line
   }
