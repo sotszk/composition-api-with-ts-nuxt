@@ -4,14 +4,30 @@
     <p>Ref: {{ aboutIt }}</p>
     <p>Reactive: {{ aboutItReactive.text }}</p>
     <button type="button" @click="onClickBtn">{{ btnLabel }}</button>
+
+    <Hoc v-slot="{ some, them }">
+      <div>{{ some }}</div>
+      <div>{{ them }}</div>
+    </Hoc>
+
+    <component :is="currentComponent" v-slot="{ some }">
+      <div>{{ some }}</div>
+    </component>
   </div>
 </template>
 
 <script lang="ts">
 import { onMounted, ref, reactive } from '@vue/composition-api'
+import Hoc from '@/components/Hoc.vue'
 
 export default {
+  components: {
+    Hoc,
+  },
+
   setup() {
+    const currentComponent = ref(Hoc)
+
     onMounted(() => {
       console.log('mounted')
     })
@@ -42,6 +58,7 @@ export default {
       aboutIt,
       aboutItReactive,
       btnLabel,
+      currentComponent,
       ...methods,
     }
   },
