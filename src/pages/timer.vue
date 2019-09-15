@@ -1,13 +1,15 @@
 <script lang="tsx">
 import 'vue-tsx-support/enable-check'
 import * as tsx from 'vue-tsx-support'
-import { computed } from '@vue/composition-api'
+import { computed, Ref } from '@vue/composition-api'
 import useTimeout from '~/hooks/useTimeout'
 
 export default tsx.component({
   setup() {
     const { ready } = useTimeout(2000)
-    const readyText = computed(() => (ready.value ? 'ready!' : '---'))
+    const readyText: Ref<string> = computed(() =>
+      ready.value ? 'ready!' : '---'
+    )
     return {
       ready,
       readyText,
@@ -15,7 +17,7 @@ export default tsx.component({
   },
 
   render() {
-    const { readyText } = this // NOTE: type does not exists...
+    const { readyText }: any = this // NOTE: type does not exists...
     return (
       <div>
         <h1>{readyText}</h1>

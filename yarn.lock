@@ -1319,6 +1319,13 @@
     lodash.unescape "4.0.1"
     semver "^6.2.0"
 
+"@u3u/vue-hooks@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@u3u/vue-hooks/-/vue-hooks-2.0.1.tgz#d7e3d22a08bd612ca08f78f9b0def0ad54e3d667"
+  integrity sha512-VEz/Ru602tcg0rECn2R7KvtmGOUpZrqL3g8N0C+819zUKTMKgrhQYc7SMb3YivMCCWmBG8TOw1WH2Rzl5Kjj+g==
+  dependencies:
+    dayjs "^1.8.15"
+
 "@vue/babel-helper-vue-jsx-merge-props@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@vue/babel-helper-vue-jsx-merge-props/-/babel-helper-vue-jsx-merge-props-1.0.0.tgz#048fe579958da408fb7a8b2a3ec050b50a661040"
@@ -2879,6 +2886,11 @@ date-now@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/date-now/-/date-now-0.1.4.tgz#eaf439fd4d4848ad74e5cc7dbef200672b9e345b"
   integrity sha1-6vQ5/U1ISK105cx9vvIAZyueNFs=
+
+dayjs@^1.8.15:
+  version "1.8.16"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.8.16.tgz#2a3771de537255191b947957af2fd90012e71e64"
+  integrity sha512-XPmqzWz/EJiaRHjBqSJ2s6hE/BUoCIHKgdS2QPtTQtKcS9E4/Qn0WomoH1lXanWCzri+g7zPcuNV4aTZ8PMORQ==
 
 de-indent@^1.0.2:
   version "1.0.2"
